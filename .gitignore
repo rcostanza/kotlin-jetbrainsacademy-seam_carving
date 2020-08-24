@@ -1,0 +1,6 @@
+.gradle
+.idea
+build/
+**/task/build/
+**/task/out/
+*.png

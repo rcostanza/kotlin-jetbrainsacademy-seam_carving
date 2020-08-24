@@ -1,0 +1,172 @@
+hyperskill_project:
+  id: 100
+  ide_files: https://stepik.org/media/attachments/lesson/312105/additional_files.json
+  is_template_based: false
+  use_ide: true
+stages:
+- id: 550
+  step: 9015
+- id: 551
+  step: 9016
+- id: 552
+  step: 9017
+- id: 553
+  step: 9018
+- id: 554
+  step: 9019
+- id: 555
+  step: 9020
+topics:
+  0:
+  - title: External resources
+    theory_id: 6216
+  - title: Units of information
+    theory_id: 6865
+  - title: Files
+    theory_id: 6989
+  - title: Libraries
+    theory_id: 8504
+  - title: Binary numbers
+    theory_id: 5544
+  - title: Hexadecimal numbers
+    theory_id: 8788
+  - title: Introduction to Kotlin
+    theory_id: 4350
+  - title: Basic literals
+    theory_id: 4351
+  - title: Overview of the basic program
+    theory_id: 4362
+  - title: Values and variables
+    theory_id: 4371
+  - title: Data types
+    theory_id: 4388
+  - title: The classification of basic types
+    theory_id: 4455
+  - title: Comments
+    theory_id: 4406
+  - title: Coding style conventions
+    theory_id: 4419
+  - title: Naming variables
+    theory_id: 4389
+  - title: Standard output
+    theory_id: 4425
+  - title: Arithmetic operations
+    theory_id: 4472
+  - title: Boolean and logical operations
+    theory_id: 4515
+  - title: Invoking functions
+    theory_id: 4575
+  - title: Standard input
+    theory_id: 4445
+  - title: Type conversion
+    theory_id: 4672
+  - title: Type inference
+    theory_id: 9506
+  - title: Integers in action
+    theory_id: 4488
+  - title: Relational operators
+    theory_id: 4525
+  - title: Declaring functions
+    theory_id: 4580
+  - title: Characters
+    theory_id: 4680
+  - title: Ranges
+    theory_id: 4633
+  - title: Objects
+    theory_id: 6773
+  - title: Strings
+    theory_id: 4540
+  - title: String templates
+    theory_id: 4547
+  - title: Arrays
+    theory_id: 4564
+  - title: If expression
+    theory_id: 4625
+  - title: Repeating blocks
+    theory_id: 4643
+  - title: For loop and ranges
+    theory_id: 4652
+  - title: For loop and arrays
+    theory_id: 4657
+  - title: Functions as objects
+    theory_id: 5991
+  - title: Lambda expressions
+    theory_id: 6154
+  - title: IDE
+    theory_id: 3805
+  - title: What is an exception
+    theory_id: 7243
+  - title: Reading files
+    theory_id: 6351
+  - title: RGB
+    theory_id: 8819
+  - title: Introduction to matrices
+    theory_id: 7112
+  - title: Types of matrices
+    theory_id: 7285
+  - title: IntelliJ IDEA
+    theory_id: 3801
+  1:
+  - title: Taming exceptions
+    theory_id: 7601
+  - title: Introduction to operating systems
+    theory_id: 9704
+  - title: Command line overview
+    theory_id: 8977
+  2:
+  - title: Introduction to OOP
+    theory_id: 3614
+  - title: Bugs and debugging
+    theory_id: 5504
+  - title: Floating-point types
+    theory_id: 4502
+  - title: The Math library
+    theory_id: 4563
+  - title: Declaring classes
+    theory_id: 6200
+  - title: Constructors
+    theory_id: 6237
+  - title: Member functions
+    theory_id: 6364
+  - title: Properties accessors
+    theory_id: 10511
+  3:
+  - title: Computer algorithms
+    theory_id: 4953
+  - title: Recursion basics
+    theory_id: 5984
+  - title: Divide and conquer
+    theory_id: 3544
+  - title: Introducing the first algorithm
+    theory_id: 10336
+  - title: The big O notation
+    theory_id: 4991
+  - title: Data structures
+    theory_id: 5161
+  - title: Graph
+    theory_id: 6685
+  - title: Basic terminology
+    theory_id: 6922
+  - title: Directed acyclic graph
+    theory_id: 5186
+  - title: Representation of graphs
+    theory_id: 5227
+  - title: Weighted graph
+    theory_id: 5645
+  - title: Queue
+    theory_id: 5350
+  - title: Priority queue
+    theory_id: 7384
+  - title: Breadth-first search
+    theory_id: 7068
+  - title: Dijkstra's algorithm
+    theory_id: 5772
+  - title: Dynamic programming basics
+    theory_id: 7948
+  4:
+  - title: Inheritance
+    theory_id: 7770
+  - title: Overriding functions
+    theory_id: 7884
+  - title: Operations with matrices
+    theory_id: 7296
