@@ -170,6 +170,19 @@ files:
 - name: test/trees.png
   visible: false
   learner_created: false
+- name: test/small-negative.png
+  visible: true
+  learner_created: true
+- name: test/blue-negative.png
+  visible: true
+  learner_created: true
+- name: test/trees-negative.png
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/100/stages/551/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/100/stages/551/implement">JetBrains
+    Academy</a>
+  time: Tue, 25 Aug 2020 00:00:42 UTC
+record: 2
