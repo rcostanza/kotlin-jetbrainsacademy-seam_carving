@@ -10,16 +10,33 @@ import kotlin.math.sqrt
 fun main(args: Array<String>) {
     val inputImage = args[args.indexOf("-in") + 1]
     val outputImage = args[args.indexOf("-out") + 1]
+    val removeWidth = args[args.indexOf("-width") + 1].toInt()
+    val removeHeight = args[args.indexOf("-height") + 1].toInt()
 
-    val buffer = ImageIO.read(File(inputImage))
-    val energyBuffer = buffer.energyBuffer()
+    var buffer = ImageIO.read(File(inputImage))
 
-//    for (pixel in energyBuffer.getSeam()) {
-//        buffer.setRGB(pixel.x, pixel.y, Color.RED.rgb)
-//    }
+    repeat(removeWidth) {
+        val energyGrid = buffer.energyBuffer()
+        val newBuffer = BufferedImage(buffer.width - 1, buffer.height, BufferedImage.TYPE_INT_RGB)
+        for (pixel in energyGrid.getSeam()) {
+            // Unchanged pixels
+            for (x in 0 until pixel.x) newBuffer.setRGB(x, pixel.y, buffer.getRGB(x, pixel.y))
+            // Moved pixels
+            for (x in pixel.x+1 until buffer.width) newBuffer.setRGB(x - 1, pixel.y, buffer.getRGB(x, pixel.y))
+        }
+        buffer = newBuffer
+    }
 
-    for (pixel in energyBuffer.getSeam("horizontal")) {
-        buffer.setRGB(pixel.x, pixel.y, Color.RED.rgb)
+    repeat(removeHeight) {
+        val energyGrid = buffer.energyBuffer()
+        val newBuffer = BufferedImage(buffer.width, buffer.height - 1, BufferedImage.TYPE_INT_RGB)
+        for (pixel in energyGrid.getSeam("horizontal")) {
+            // Unchanged pixels
+            for (y in 0 until pixel.y) newBuffer.setRGB(pixel.x, y, buffer.getRGB(pixel.x, y))
+            // Moved pixels
+            for (y in pixel.y+1 until buffer.height) newBuffer.setRGB(pixel.x, y - 1, buffer.getRGB(pixel.x, y))
+        }
+        buffer = newBuffer
     }
 
     ImageIO.write(buffer, "png", File(outputImage))
@@ -57,23 +74,10 @@ class BufferedImageEnergyGrid(buffer: BufferedImage): Cloneable {
     var rows = buffer.height
     var grid = Array(cols) { Array(rows) { 0.0 } }
 
-    var maxEnergy: Double = 0.0
-    private set
-
     operator fun get(x: Int, y: Int) = grid[x][y]
     operator fun get(pixel: Pixel) = this[pixel.x, pixel.y]
     operator fun set(x: Int, y: Int, value: Double) {
         grid[x][y] = value
-    }
-
-    init {
-        (0 until cols).map { col ->
-            (0 until rows).map { row ->
-                val energy = buffer.getEnergy(col, row)
-                this[col, row] = energy
-                if (energy > maxEnergy) maxEnergy = energy
-            }
-        }
     }
 
     private fun transpose(): BufferedImageEnergyGrid {
